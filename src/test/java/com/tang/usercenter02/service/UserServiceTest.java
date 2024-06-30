@@ -2,9 +2,13 @@ package com.tang.usercenter02.service;
 
 import com.tang.usercenter02.model.domain.User;
 import jakarta.annotation.Resource;
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.Arrays;
+import java.util.List;
 
 /*
  * 用户服务测试
@@ -75,5 +79,12 @@ public class UserServiceTest {
         result = userService.userRegister(userAccount, userPassword, checkPassword);
         Assertions.assertEquals(-1, result);
 
+    }
+
+    @Test
+    public void testSearchUsersByTags() {
+        List<String> tagNameList = Arrays.asList("java", "python");
+        List<User> userList = userService.searchUserByTags(tagNameList);
+        Assert.assertNotNull(userList);
     }
 }

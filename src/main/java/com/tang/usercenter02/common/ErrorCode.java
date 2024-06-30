@@ -11,8 +11,8 @@ public enum ErrorCode {
      *
      */
     SUCCESS(0, "ok", ""),
-    PARANS_ERROR(40000, "请求参数错误", ""),
-    PARANS_NULL_ERROR(40001, "请求参数为空", ""),
+    PARAMS_ERROR(40000, "请求参数错误", ""),
+    PARAMS_NULL_ERROR(40001, "请求参数为空", ""),
     NO_LOGIN(40100, "未登录", ""),
     NO_AUTH(40100, "无权限", ""),
     SYSTEM_ERROR(50000, "系统内部异常", "");
